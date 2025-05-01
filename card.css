@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(rgb(55, 119, 221), rgb(83, 104, 139));
+    height: 100vh;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.bank-cards-sect {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.add-card-title {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.card-block-add {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url(./images/bg-ph.jpg);
+    height: 844px;
+    width: 390px;
+    border-radius: 25px;
+    margin-top: 40px;
+    box-shadow: rgba(255, 255, 255, 0.511) 0px 5px 30px 10px,
+        rgba(255, 255, 255, 0.208) 0px 2px 1px 1px;
+
+    button {
+        color: #fff;
+        background-color: #FF9900;
+        border-radius: 40px;
+        width: 190px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        border: none;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-add-details {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 50px 25px 0 25px;
+    height: 444px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .enter-details-text {
+        color: #FF9900;
+    }
+
+    input {
+        text-transform: uppercase;
+        padding: 12px;
+        border-style: none;
+        border-bottom: 1px solid black;
+        width: 95%;
+    }
+}
+
+.visa-pos {
+    position: relative;
+    padding-left: 4px;
+    right: 40px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+    .card-data {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 30px 40px 50px 0px #1930554D;
+        background: linear-gradient(#52627b, #7888a4, #526477);
+        border-radius: 15px;
+        padding: 10px;
+        width: 342px;
+        height: 190px;
+        padding: 19px;
+        color: #fff;
+        box-shadow: 12px 15px 2px 1px rgba(77, 77, 77, 0.511);
+        gap: 20px;
+        border: 1px solid #a0adc5;
+    }
+
+    .name-contant {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-contant {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name-data-contant {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .name-text,
+    .data-text {
+        font-weight: 200;
+    }
+
+    p {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.card-reciever {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url(./images/bg-ph.jpg);
+    height: 844px;
+    width: 390px;
+    border-radius: 25px;
+    margin-top: 40px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-top: 50px;
+    box-shadow: rgba(233, 222, 222, 0.511) 0px 5px 30px 10px,
+        rgba(255, 237, 237, 0.208) 0px 2px 1px 1px;
+
+    .recieve-card-title {
+        padding-bottom: 100px;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    button {
+        color: #fff;
+        background-color: #FF9900;
+        border-radius: 40px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        border: none;
+        /* position: relative; */
+        bottom: 160px;
+        left: 80px;
+
+    }
+
+    .delete-all-btn {
+        position: absolute;
+        bottom: 5%;
+        left: 30%;
+        color: #fff;
+        background-color: #FF9900;
+        border-radius: 40px;
+        width: 190px;
+        height: 40px;
+        display: flex;
+        text-transform: uppercase;
+        border: none;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+
+    }
+}
+
+.loadingLogo {
+    position: absolute;
+    top: 40%;
+    left: 47%;
+    display: none;
+}
+
+.img-delBtn {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    img {
+        object-fit: contain;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .bank-cards-sect {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 50%;
+    }
+
+    .loadingLogo {
+        z-index: 1;
+    }
+
+    .card-block-add {
+        width: 306px;
+
+    }
+
+    .card-reciever {
+        width: 306px;
+    }
+
+    .card-add-details {
+        height: 400px;
+        width: 280px;
+        gap: 23px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        gap: 25px;
+
+
+        .card-data {
+            width: 280px;
+            height: 183px;
+            padding: 10px;
+        }
+
+    }
+
+    .delete-all-btn,
+    .save-btn {
+        width: 120px !important;
+        height: 20px;
+    }
+
+
+}
